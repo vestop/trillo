@@ -12,7 +12,46 @@
 </head>
 
 <body>
-  <h1>Test</h1>
+  <div class="container">
+    <header class="header">
+      <img src="img/logo.png" alt="Trillo logo" class="logo">
+      <form action="#" class="search">
+        <input class="search__input" type="search" placeholder="Search Hotel">
+        <button class="search__btn">
+          <svg class="search__icon">
+            <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+          </svg>
+        </button>
+      </form>
+
+      <nav class="user-nav">
+        <div class="user-nav__icon-box">
+          <svg class="user-nav__icon">
+            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+          </svg>
+          <span class="user-nav__notification">7</span>
+        </div>
+        <div class="user-nav__icon-box">
+          <svg class="user-nav__icon">
+            <use xlink:href="img/sprite.svg#icon-chat"></use>
+          </svg>
+          <span class="user-nav__notification">13</span>
+        </div>
+        <div class="user-nav__user">
+          <img src="img/user.jpg" alt="User photo" class="user-nav__user-photo">
+          <span class="user-nav__user-name">Jonas</span>
+        </div>
+      </nav>
+    </header>
+    <div class="content">
+      <nav class="sidebar">
+        Navigation
+      </nav>
+      <main class="hotel-view">
+        View
+      </main>
+    </div>
+  </div>
 </body>
 
 </html>
