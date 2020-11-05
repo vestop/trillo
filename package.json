@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:vestop/natours.git"
+    "url": "git+ssh://git@github.com:vestop/trillo.git"
   },
   "license": "MIT",
   "browserslist": [
