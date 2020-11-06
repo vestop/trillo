@@ -233,8 +233,17 @@
   border-bottom: 1px solid currentColor;
   cursor: pointer;
 
+  & span {
+    margin-left: 3px;
+    transition: margin 0.3s;
+  }
+
   &:hover {
     color: var(--color-grey-dark-1);
+
+    span {
+      margin-left: 8px;
+    }
   }
 
   &:focus {
@@ -249,7 +258,7 @@
     transform: scale(1);
   }
   50% {
-    box-shadow: var(--shadow-light);
+    box-shadow: var(--shadow-dark);
     transform: scale(1.05);
   }
   100% {
@@ -315,5 +324,130 @@
   }
   &__count {
     margin-right: auto;
+  }
+}
+
+////////////////////////////////////
+//REVIEW
+.review {
+  position: relative;
+  margin-bottom: 3.5rem;
+  padding: 3rem;
+  overflow: hidden;
+  text-align: initial;
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  &__text {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__photo {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin: 1.5rem;
+    border-radius: 50%;
+  }
+  &__user-box {
+    margin-right: auto;
+  }
+  &__user-name {
+    margin-bottom: 0.4rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+  &__date {
+    color: var(--color-grey-dark-2);
+    font-size: 1rem;
+  }
+  &__rating {
+    color: var(--color-primary);
+    font-weight: 300;
+    font-size: 2.2rem;
+  }
+
+  &::before {
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    color: var(--color-grey-light-2);
+    font-size: 20rem;
+    font-family: sans-serif;
+    line-height: 1;
+    content: "\201C";
+  }
+}
+
+/////////////////////////////
+// CALL TO ACTION
+
+.cta {
+  padding: 3.5em 0;
+  text-align: center;
+
+  &__book-now {
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+
+  background-position: top;
+  background-size: 100% 400%;
+  border: 0;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  & > * {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+  &__visible {
+    display: inline-block;
+    padding: 2rem 7.5rem;
+    transition: transform 0.3s;
+  }
+  &__invisible {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: 2rem 0;
+    transition: top 0.3s;
+  }
+
+  &:hover &__invisible {
+    top: 0;
+  }
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+  &:hover {
+    background-position: bottom;
+  }
+  &:focus {
+    outline: none;
+    animation: pulse 1s infinite;
   }
 }
