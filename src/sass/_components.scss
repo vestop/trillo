@@ -94,3 +94,67 @@
     border-radius: 50%;
   }
 }
+
+///////////////////////////////////////
+//SIDE NAVIGATION
+.side-nav {
+  margin-top: 3.5rem;
+  font-size: 1.4rem;
+  list-style: none;
+  &__item {
+    position: relative;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+  &__item:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: var(--color-primary);
+    transform: scaleY(0);
+    transition: transform 0.5s, width 0.4s 0.3s;
+    content: "";
+  }
+  &__item:hover::before,
+  &__item--active::before {
+    width: 100%;
+    transform: scaleY(1);
+  }
+  &__item--active::before {
+    background-color: var(--color-primary-light);
+  }
+  &__link {
+    position: relative;
+    z-index: 2;
+    display: block;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    color: var(--color-grey-light-1);
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  &__icon {
+    width: 1.7rem;
+    height: 1.7rem;
+    margin-right: 3rem;
+    fill: currentColor;
+  }
+}
+
+.legal {
+  padding: 2.5rem;
+  color: var(--color-grey-light-3);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+///////////////////////////////////
+//Content
+.hotel-view {
+  height: 80rem;
+  background-color: olivedrab;
+}
